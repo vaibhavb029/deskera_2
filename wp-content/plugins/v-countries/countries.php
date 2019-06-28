@@ -178,7 +178,7 @@ function prfx_meta_callback( ) {
 		<?php 
 		global $wpdb;
 	$conn = mysqli_connect("localhost", "root", "", "deskera_2");
-	$result = mysqli_query($conn,"Select DISTINCT country,topLevelDomain,alpha2Code,alpha3Code,callingCodes ,timezones,currencies,country_flag from wp_countries"); 
+	$result = mysqli_query($conn,"Select DISTINCT country,topLevelDomain,alpha2Code,alpha3Code,callingCodes ,timezones,currencies from wp_countries"); 
 		
 		while($row = mysqli_fetch_array($result)){
     			echo"<option data-topLevelDomain='$row[1]'data-alpha2Code='$row[2]' data-alpha3Code='$row[3]'data-callingCodes='$row[4]'data-timezones='$row[5]'  data-currencies='$row[6]'value='$row[0]'> $row[0] </option>";
